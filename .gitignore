@@ -1,0 +1,5 @@
+.DS_Store
+node_modules
+code/basic-testing-frontend/node_modules/
+code/basic-testing-nodejs/node_modules/
+code/basic-testing-nodejs-esmodules/node_modules/
