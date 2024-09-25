@@ -5,8 +5,6 @@ export function validateStringNotEmpty(value) {
 }
 
 export function validateNumber(number) {
-  console.log(isNaN(number))
-  console.log(typeof(number)==number)
   if (isNaN(number) || typeof(number)!=='number') {
     throw new Error('Invalid number input.');
   }
