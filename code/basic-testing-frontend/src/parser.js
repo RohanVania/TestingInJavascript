@@ -5,3 +5,8 @@ export function extractNumbers(formData) {
   return [num1Input, num2Input];
 }
 
+export function extractFormData(form){
+  const formData=new FormData(form);
+  const numberInputs=extractNumbers(formData);
+  return numberInputs;
+}
