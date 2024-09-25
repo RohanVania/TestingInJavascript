@@ -10,8 +10,10 @@ function formSubmitHandler(event) {
   event.preventDefault();
 
   const numberInputs = extractFormData(form);
-
-  const result = cleanInput(numberInputs);
+  let result='';
+  const cleanNumber = cleanInput(numberInputs);
+  
+  result = add(cleanNumber).toString();
 
   const resultText = generateOutput(result)
 

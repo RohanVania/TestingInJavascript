@@ -16,4 +16,4 @@ export function cleanInput(numberInputs) {
     numbers.push(number);
   }
   return numbers;
-}
+} 
