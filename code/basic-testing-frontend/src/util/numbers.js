@@ -1,5 +1,5 @@
 import { add } from "../math.js";
-import { validateNumber, validateStringNotEmpty} from "./validation.js";
+import { validateNumber, validateStringNotEmpty } from "./validation.js";
 
 
 export function transformToNumber(value) {
@@ -8,18 +8,12 @@ export function transformToNumber(value) {
 
 
 export function cleanInput(numberInputs) {
-  let result='';
-  try {
-    const numbers = [];
-    for (const numberInput of numberInputs) {
-      validateStringNotEmpty(numberInput);
-      const number = transformToNumber(numberInput);
-      validateNumber(number);
-      numbers.push(number);
-    }
-    result = add(numbers).toString();
-  } catch (error) {
-    result = error.message;
+  const numbers = [];
+  for (const numberInput of numberInputs) {
+    validateStringNotEmpty(numberInput);
+    const number = transformToNumber(numberInput);
+    validateNumber(number);
+    numbers.push(number);
   }
-  return result;
+  return numbers;
 }
